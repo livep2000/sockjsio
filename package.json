@@ -10,7 +10,7 @@
                    "url": "https://github.com/livep2000/sockjsio.git"},
     "dependencies": {
         "sockjs"	: "0.3.4",
-        "async" 	: "0.1.23"
+        "async" 	: "0.1.22"
     },
     "main": "./lib/sockjsio"
 }
