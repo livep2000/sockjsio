@@ -1,4 +1,4 @@
-var sockjsio = require('./sockjsio');
+var sockjsio = require('../lib/sockjsio');
 
 sockjsio.listen( 8005 , '0.0.0.0', "/A", true );
 

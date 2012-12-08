@@ -1,0 +1,16 @@
+{
+    "name"        : "sockjsio",
+    "author"      : "Imre Biacsics",
+    "version"     : "0.0.1",
+    "description" : "Sockjsio is an extention on the great, great sockjs-node server. Providing multiroom functionality.",
+    "keywords"    : ["multiroom", "websockets", "websocket"],
+    "homepage"    : "https://github.com/sockjs/sockjs-node",
+
+    "repository": {"type": "git",
+                   "url": "https://github.com/livep2000/sockjsio.git"},
+    "dependencies": {
+        "sockjs"	: "0.3.4",
+        "async" 	: "0.1.23"
+    },
+    "main": "./lib/sockjsio"
+}
