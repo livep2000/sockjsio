@@ -4,6 +4,11 @@ I must be doing some things wrong, please feel free to correct me with feedback.
 Sockjsio is a multiroom manager based on the sockjs client (https://github.com/sockjs/sockjs-client) 
 and sockjs-node (https://github.com/sockjs/sockjs-node) server.
 
+Dependecies are aync and sockjs. Install if not allready done
+	
+	npm install sockjs
+	npm install async
+
 Defining a server is plane and simple:
 
 var sockjsio = require('./sockjsio');
@@ -19,11 +24,11 @@ A simple echo example:
     sockjsio.listen( 8080 , '0.0.0.0', "/A", true );
     
     sockjsio.on('connection', function( connection )
-        {
-	    connection.on('roomopen', function( roomName )
-	        {
-		    console.log(connection.id + " opened room " + roomName );
-		    });
+	{
+	connection.on('roomopen', function( roomName )
+		{
+		console.log(connection.id + " opened room " + roomName );
+		});
 
 	    connection.join("room1");
 	    connection.join("room2");
@@ -31,17 +36,17 @@ A simple echo example:
 	
 	    connection.on('data', function( response )
 	        {
-            var data = JSON.parse( response );
+            	var data = JSON.parse( response );
       
-            // possible ways to send a message
-            connection.emitRoom( data.roomName, data.message );  		// Send to whole room including connection
-            connection.broadcastRoom( data.roomName, data.message );  	// Send to all in this room but connection
-            connection.sendRoom( data.roomName, data.message );  	    // Send to this connection if in this room
+            	// possible ways to send a message
+            	connection.emitRoom( data.roomName, data.message );  		// Send to whole room including connection
+            	connection.broadcastRoom( data.roomName, data.message );  	// Send to all in this room but connection
+            	connection.sendRoom( data.roomName, data.message );  	    // Send to this connection if in this room
 
-            connection.emitClient( data.message );				        // Send to all clients on the server
-            connection.broadcastClient( data.message );			        // Send to all except connection
-            connection.sendClient( data.message );				        // Send to this connection
-            });
+            	connection.emitClient( data.message );				        // Send to all clients on the server
+            	connection.broadcastClient( data.message );			        // Send to all except connection
+            	connection.sendClient( data.message );				        // Send to this connection
+            	});
 
 	    var isInroom = connection.isInRoom('room1'); 				    // = true if in 'room1'	
 	    var joined = connection.joined(); 				                // Array with roomnames
