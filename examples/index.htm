@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+	<head>
+	<title>The sockjsio rooms experiment</title>
+    	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="style/style.css" type="text/css">
+	<script src="javascript/jquery.min.js"></script>
+	<script src="javascript/sockjs-0.3.min.js"></script>
+	<script src="javascript/start.js"></script>
+	</head>
+	<body>
+		User name: <input id="username" class="nameinput"/> <button onclick="connect();">Connect</button><br>
+		<div style="display: inline-block;">
+			room1<br>
+			<div id="room1" class="chatdiv"></div>
+            		<input type="text" id="input1"  class="chatinput"/>
+		</div>
+		<div style="display: inline-block;">
+			room2<br>
+            		<div id="room2" class="chatdiv"></div>
+			<input type="text" id="input2" class="chatinput" /> 
+		</div>
+		<br/><br/>
+		<div id="commandroom" class="commanddiv"></div>
+    	</body>
+</html>

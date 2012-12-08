@@ -1,0 +1,81 @@
+body
+	{
+	margin: 5Px 5Px 5Px 5Px;
+	overflow:hidden;
+	}
+
+div
+	{
+	padding:5Px;
+	border-radius:10Px;
+	FONT-SIZE: 9px;
+	FONT-FAMILY: Verdana, arial, helvetica, serif;
+	font-weight: bold;
+	}
+
+div.userpanel
+	{
+	float:right;
+	width:75Px;
+	height:320Px;
+	overflow:auto;
+	background-color:#E0E0E0;
+	}
+
+input.chatinput
+	{
+	clear:both;
+	width:290Px;
+	position:relative;
+	top:5Px;
+	height:15Px; 
+	overflow:hidden;
+	padding:5Px;
+	border-radius:10Px;
+	border-style:none;
+	FONT-SIZE: 11px;
+	FONT-FAMILY: Verdana, arial, helvetica, serif;
+	font-weight: bold;
+	background-color:#E0E0E0;
+	}
+
+input.nameinput
+	{
+	clear:both;
+	width:100Px;
+	position:relative;
+	top:5Px;
+	height:15Px; 
+	overflow:hidden;
+	padding:5Px;
+	border-radius:10Px;
+	border-style:none;
+	FONT-SIZE: 11px;
+	FONT-FAMILY: Verdana, arial, helvetica, serif;
+	font-weight: bold;
+	background-color:#E0E0E0;
+	}
+
+div.chatdiv 
+	{
+	overflow:auto;
+	border:none;
+	width:300Px;
+	height:260Px;
+	border-radius:10Px;
+	padding :5Px;
+	background-color:#E0E0E0;
+	}
+
+
+div.commanddiv 
+	{
+	overflow:auto;
+	border:none;
+	width:620Px;
+	height:150Px;
+	border-radius:10Px;
+	padding :5Px;
+	background-color:#E0E0E0;
+
+	}
