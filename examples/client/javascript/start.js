@@ -17,7 +17,7 @@ function connect()
 
         	connection.onmessage = function (response) 
             		{
-           	 	var data = JSON.parse(response.data);
+           	 	var data = JSON.parse( response.data );
             		$("#" + data.roomName ).append("<br>" + data.data);
 			$("#" + data.roomName ).prop({ scrollTop: $("#" + data.roomName ).prop("scrollHeight") });
             		};
