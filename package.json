@@ -1,7 +1,7 @@
 {
   "name": "sockjsio",
   "author": "Imre Biacsics",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "Sockjsio is an extention on the great, great sockjs-node server. Providing multiroom functionality.",
   "keywords": [
     "multiroom",
