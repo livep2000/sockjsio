@@ -39,17 +39,17 @@ A simple echo example:
             	var data = JSON.parse( response );
       
             	// possible ways to send a message
-            	connection.emitRoom( data.roomName, data.message );  		// Send to whole room including connection
-            	connection.broadcastRoom( data.roomName, data.message );  	// Send to all in this room but connection
-            	connection.sendRoom( data.roomName, data.message );  	    // Send to this connection if in this room
+            	connection.emitRoom( data.roomName, data.message )	// Send to whole room including connection
+            	connection.broadcastRoom( data.roomName, data.message );// Send to all in this room but connection
+            	connection.sendRoom( data.roomName, data.message )	// Send to this connection if in this room
 
-            	connection.emitClient( data.message );				        // Send to all clients on the server
-            	connection.broadcastClient( data.message );			        // Send to all except connection
-            	connection.sendClient( data.message );				        // Send to this connection
+            	connection.emitClient( data.message );			// Send to all clients on the server
+            	connection.broadcastClient( data.message );		// Send to all except connection
+            	connection.sendClient( data.message );			// Send to this connection
             	});
 
-	    var isInroom = connection.isInRoom('room1'); 				    // = true if in 'room1'	
-	    var joined = connection.joined(); 				                // Array with roomnames
+	    var isInroom = connection.isInRoom('room1');		// = true if in 'room1'	
+	    var joined = connection.joined()				// Array with roomnames
 	    });
 
 Within the connections there are some handy events they all return the roomName.
@@ -66,12 +66,12 @@ Within the connections there are some handy events they all return the roomName.
 
 There are two other functions within connections:
 
-    var isInroom = connection.isInRoom('room1'); 		    // Bool true / false	
-    var joined = connection.joined(); 				        // Array with roomnames the client joined
+    var isInroom = connection.isInRoom('room1'); 		    	// Bool true / false	
+    var joined = connection.joined()					// Array with roomnames the client joined
 
 To make it complete: 
 
-    var roomExists = sockjsio.roomExists("room2");		    // False: this user hase left the room
-    var usersInRoom = sockjsio.usersInRoom("room1");	    // Array with connection id's of joined sockets
+    var roomExists = sockjsio.roomExists("room2");		    	// False: last user hase left the room
+    var usersInRoom = sockjsio.usersInRoom("room1");	    		// Array with connection id's of joined sockets
     var clients = sockjsio.clients();				        // Array with all connection id's on the server
-    var client = sockjsio.client(socketID);				    // Get a socket with that ID
+    var client = sockjsio.client(socketID);				// Get a socket with that ID
